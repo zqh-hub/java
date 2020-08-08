@@ -1,7 +1,5 @@
 package com.object.java;
 
-import sun.awt.image.GifImageDecoder;
-
 public class ObjectTest09 {
     public static void main(String[] args) {
         Boy boy = new Boy("boy1", 23);
