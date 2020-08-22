@@ -3,8 +3,12 @@ package com.collection.java;
 import org.junit.Test;
 
 import java.util.HashSet;
+import java.util.Objects;
 
 /*
+* 注意：
+*   > 向Set中添加的数据，一定要重写equals()和hashCode();
+*   > 重写的hashCode()和equals()方法要求一致
 * 1、Set接口的框架
 *   |---Collection接口：单列接口，用来存储一个一个的对象
 *       |---Set接口：存储无序的、不可重复的数据
@@ -31,5 +35,24 @@ public class CollectionTest08 {
     @Test
     public void test(){
         HashSet<Object> objects = new HashSet<>();
+    }
+}
+
+class Pp{
+    private int age;
+    private String name;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pp pp = (Pp) o;
+        return age == pp.age &&
+                name.equals(pp.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(age, name);
     }
 }

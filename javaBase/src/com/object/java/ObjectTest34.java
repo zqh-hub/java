@@ -1,7 +1,5 @@
 package com.object.java;
 
-import sun.nio.ch.Net;
-
 public class ObjectTest34 {
     public static void main(String[] args) {
         Server server = new Server();
