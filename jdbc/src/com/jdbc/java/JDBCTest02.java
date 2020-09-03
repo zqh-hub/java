@@ -51,7 +51,9 @@ public class JDBCTest02 {
         *        > String:列的名称
         *
         * 注意：使用步骤：
-        *   >
+        *   > next()
+        *   > 判断是否是最后一行
+        *   > 获取数据
         * */
     }
 }

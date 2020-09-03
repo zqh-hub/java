@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+引入schema.dtd:
+    <根标签 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="文件命名空间" student.xsd
+            xmlns:"前缀"
+-->

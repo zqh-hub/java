@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!DOCTYPE students SYSTEM "student.dtd">
+<!--
+CDATA:<![CDATA[xxxxxx]]>
+引用dtd:
+    本地：<!DOCTYPE 根标签名 SYSTEM "dtd文件位置">
+    网络：<!DOCTYPE 根标签名 PUBLIC "dtd文件名字" “dtd文件位置url”>
+
+    <!ELEMENT students (student*) >:students标签出现的次数
+    <!ELEMENT student (name,age,sex)>:student标签中可以包含name,age,sex
+    <!ELEMENT name (#PCDATA)>:类型是字符串
+    <!ELEMENT age (#PCDATA)>:类型是字符串
+    <!ELEMENT sex (#PCDATA)>:类型是字符串
+    <!ATTLIST student number ID #REQUIRED>：student的number属性是必须唯一，并必填
+-->
+<students>
+    <student number="a">
+        <name>jojo</name>
+        <age>12</age>
+        <sex>男</sex>
+    </student>
+    <student number="b">
+        <name>jojo</name>
+        <age>12</age>
+        <sex>男</sex>
+    </student>
+</students>

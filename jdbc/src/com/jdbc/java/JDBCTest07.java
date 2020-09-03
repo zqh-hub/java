@@ -15,14 +15,13 @@ public class JDBCTest07 {
             statement = mysql.createStatement();
             ResultSet res = statement.executeQuery("select * from person");
             // 处理结果
-            // 1、让游标向下移动一行
-            res.next();
-            // 2、获取数据
-            int id = res.getInt(1);
-            String name = res.getString("name");
-
-
-            System.out.println(id + "," + name);
+            // 1、判断
+            while(res.next()){
+                // 2、获取
+                int id = res.getInt(1);
+                String name = res.getString("name");
+                System.out.println(id + "," + name);
+            }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException throwables) {
